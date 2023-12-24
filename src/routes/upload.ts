@@ -5,9 +5,7 @@ import { createWriteStream } from "node:fs";
 import { pipeline } from "node:stream";
 import { promisify } from "node:util";
 
-
 const pump = promisify(pipeline)
-
 
 export async function uploadRoutes(app: FastifyInstance) {
   app.post('/upload', async (req, res) => {
